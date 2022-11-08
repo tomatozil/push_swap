@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:12:59 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:13:26 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:29:03 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	copy_arr(int *from, int **to, int size)
 	int	i;
 
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		(*to)[i] = from[i];
 		i++;

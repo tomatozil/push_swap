@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:12:43 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:12:55 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:28:35 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 	nums = malloc(sizeof(int) * size);
 	if (!nums)
 		return (0);
-	if (check_argv(ac, av,  nums, size) == FALSE)
+	if (check_argv(ac, av, nums, size) == FALSE)
 	{
 		write(2, "Error\n", 6);
 		exit(0);

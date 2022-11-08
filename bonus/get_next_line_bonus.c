@@ -6,23 +6,23 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:29:07 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:30:28 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:47:22 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-static void    free_clean(char **s)
+static void	free_clean(char **s)
 {
 	free(*s);
 	*s = NULL;
 }
 
-static char    *get_line(char **keep)
+static char	*get_line(char **keep)
 {
-	char    *ptr_newline;
-	char    *backup_line;
-	char    *ret;
+	char	*ptr_newline;
+	char	*backup_line;
+	char	*ret;
 
 	ptr_newline = ft_strchr(*keep, '\n');
 	backup_line = ft_strdup(ptr_newline + 1);
@@ -32,9 +32,9 @@ static char    *get_line(char **keep)
 	return (ret);
 }
 
-char    *last_line(char **keep)
+char	*last_line(char **keep)
 {
-	char    *ret;
+	char	*ret;
 
 	if (ft_strchr(*keep, '\n'))
 		return (get_line(keep));
@@ -47,11 +47,11 @@ char    *last_line(char **keep)
 	return (ret);
 }
 
-char    *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *keep;
-	ssize_t     read_byte;
-	char        *buf;
+	static char	*keep;
+	ssize_t		read_byte;
+	char		*buf;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);

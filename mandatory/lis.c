@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:10:31 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:12:14 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:27:27 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	*converse_lis(t_deque *a, t_node *first, int *tmp, int size)
 		return (0);
 	i = a->size - 1;
 	idx = size - 1;
-	while (i >= 0 ||  idx >= 0)
+	while (i >= 0 || idx >= 0)
 	{
 		if (idx == tmp[i])
 		{
@@ -97,7 +97,7 @@ int	*get_best_lis(t_deque *a, int *lis_size)
 	best = malloc(sizeof(int) * a->size);
 	if (!best)
 		return (0);
-	get_lis_idx_arr(a,&first, &best, lis_size);
+	get_lis_idx_arr(a, &first, &best, lis_size);
 	ret = converse_lis(a, first, best, *lis_size);
 	free_arr(best);
 	return (ret);

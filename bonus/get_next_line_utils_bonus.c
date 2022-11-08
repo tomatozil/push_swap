@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:30:34 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:31:10 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:48:27 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlen(const char *s)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
-	size_t  i;
+	size_t	i;
 	char	*sub;
 
 	if (!s)
@@ -68,7 +68,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_len;
 	size_t	s2_len;
-	size_t  i;
+	size_t	i;
 	char	*new;
 
 	if (!s1)
@@ -92,8 +92,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 char	*ft_strdup(const char *s)
 {
 	char	*ret;
-	size_t  size;
-	size_t  i;
+	size_t	size;
+	size_t	i;
 
 	if (!s)
 		return (NULL);

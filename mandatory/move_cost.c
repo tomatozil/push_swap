@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:13:32 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:14:20 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:30:41 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	move_together(t_deque *a, t_deque *b, int *costs)
 		while (tmp--)
 			rrr(a, b);
 		move_to_top(a, costs[0] + together);
-		move_to_top(b, costs[1] +  together);
+		move_to_top(b, costs[1] + together);
 	}
 }
 
@@ -84,11 +84,9 @@ int	get_total_cost(int a, int b)
 
 	abs_a = ft_abs(a);
 	abs_b = ft_abs(b);
-
-	if (a * b <= 0) // sign is different
+	if (a * b <= 0)
 		return (abs_a + abs_b);
-	else
-	if (abs_a > abs_b)
+	else if (abs_a > abs_b)
 		return (abs_a);
 	else
 		return (abs_b);

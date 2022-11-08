@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:16:08 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:16:58 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:34:05 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	sort_three(t_deque *a)
 	first = a->head->data;
 	second = a->head->next->data;
 	third = a->tail->data;
-
 	if (first < third && third < second)
 	{
 		swap(a);
@@ -71,17 +70,17 @@ void	sort_four_five(t_deque *a, t_deque *b)
 	int		how_high;
 
 	while (a->size > 3)
-		push(a,b);
+		push(a, b);
 	sort_three(a);
 	cur = b->head;
 	if (cur->data > a->tail->data || cur->data < a->head->data)
-		push(b,a);
+		push(b, a);
 	while (b->size > 0)
 	{
 		next_bigger = get_next_bigger(a, cur->data);
 		how_high = get_how_high(a, next_bigger);
 		move_to_top(a, how_high);
-		push(b,a);
+		push(b, a);
 	}
 	move_to_top(a, get_how_high(a, a->min));
 }
@@ -106,7 +105,7 @@ void	sort_big(t_deque *a, t_deque *b)
 		}
 		else
 			move_together(a, b, costs);
-		push(b,a);
+		push(b, a);
 	}
 	move_to_top(a, get_how_high(a, a->min));
 }

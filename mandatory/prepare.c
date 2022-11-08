@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:15:37 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:15:55 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:31:38 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ t_node	*get_next_node(t_deque *a, t_node *cur)
 		cur = a->head;
 	else
 		cur = cur->next;
-	return cur;
+	return (cur);
 }

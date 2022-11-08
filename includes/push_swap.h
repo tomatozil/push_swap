@@ -1,13 +1,7 @@
-//
-// Created by jiyun on 2022/10/19.
-//
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include <unistd.h>
-//# include <stdio.h>
-//# include <stdbool.h>
 # include <stdlib.h>
 
 # define TRUE 1

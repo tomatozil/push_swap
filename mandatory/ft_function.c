@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 17:10:13 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:10:14 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:27:01 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int	ft_atoi(char *str, int *disc)
 		cnt++;
 		str++;
 	}
-	if (*str != '\0' || cnt > 10 || ret * sign > 2147483647 || ret * sign < -2147483648)
+	if (*str != '\0' || cnt > 10 || \
+			ret * sign > 2147483647 || ret * sign < -2147483648)
 		*disc = FALSE;
 	return (ret * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:15:22 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:15:33 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:31:16 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	reverse_rotate(t_deque *dq)
 	write(1, "\n", 1);
 }
 
-void    rrr(t_deque *a, t_deque *b)
+void	rrr(t_deque *a, t_deque *b)
 {
 	push_head(a, pop_tail(a));
 	push_head(b, pop_tail(b));

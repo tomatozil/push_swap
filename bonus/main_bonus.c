@@ -6,13 +6,13 @@
 /*   By: jiyun <jiyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:32:23 by jiyun             #+#    #+#             */
-/*   Updated: 2022/11/07 19:32:50 by jiyun            ###   ########.fr       */
+/*   Updated: 2022/11/08 19:48:44 by jiyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_deque	a;
 	t_deque	b;
