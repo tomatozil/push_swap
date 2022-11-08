@@ -12,17 +12,6 @@
 
 #include "checker_bonus.h"
 
-t_deque	*init_deque(t_deque *dq, char name)
-{
-	dq->name = name;
-	dq->head = NULL;
-	dq->tail = NULL;
-	dq->max = NULL;
-	dq->min = NULL;
-	dq->size = 0;
-	return (dq);
-}
-
 int	is_empty(t_deque *dq)
 {
 	return (dq->head == NULL);
@@ -82,21 +71,10 @@ t_node	*get_n_th(t_deque *a, t_node *first, int index)
 	return (cur);
 }
 
-void	free_deque(t_deque *dq)
+void	update_min_max(t_deque *dq, t_node *node)
 {
-	int		i;
-	t_node	*cur;
-	t_node	*tmp;
-
-	i = 0;
-	if (is_empty(dq))
-		return ;
-	cur = dq->head;
-	while (i < dq->size)
-	{
-		tmp = cur->next;
-		free(cur);
-		cur = tmp;
-		i++;
-	}
+	if (dq->max->data < node->data)
+		dq->max = new_node;
+	if (dq->min->data > node->data)
+		dq->min = new_node;
 }

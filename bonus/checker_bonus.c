@@ -72,6 +72,7 @@ void	do_cmd(char *cmd, t_deque *a, t_deque *b)
 	else if (ft_strncmp(cmd, "ss\n", 3) == 0)
 		ss(a, b);
 	else
+		error_exit();
 	{
 		write(2, "Error\n", 6);
 		exit(0);

@@ -47,10 +47,7 @@ int	push_head(t_deque *dq, int new_data)
 		dq->head = new_node;
 	}
 	dq->head->prev = NULL;
-	if (dq->max->data < new_node->data)
-		dq->max = new_node;
-	if (dq->min->data > new_node->data)
-		dq->min = new_node;
+	update_min_max(dq, new_node);
 	dq->size++;
 	return (TRUE);
 }
@@ -77,10 +74,7 @@ int	push_tail(t_deque *dq, int new_data)
 		dq->tail = new_node;
 	}
 	dq->tail->next = NULL;
-	if (dq->max->data < new_node->data)
-		dq->max = new_node;
-	if (dq->min->data > new_node->data)
-		dq->min = new_node;
+	update_min_max(dq, new_node);
 	dq->size++;
 	return (TRUE);
 }
