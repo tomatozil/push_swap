@@ -6,6 +6,7 @@ NAME_BONUS = checker
 
 SRCS = mandatory/deque.c \
 	   mandatory/deque_utils.c \
+	   mandatory/deque_life_death.c \
 	   mandatory/operations.c \
 	   mandatory/operations_r.c \
 	   mandatory/ft_function.c \
@@ -23,6 +24,7 @@ SRCS_BONUS = bonus/check_n_parse_bonus.c \
              bonus/checker_bonus.c \
              bonus/deque_bonus.c \
              bonus/deque_utils_bonus.c \
+             bonus/deque_life_death_bonus.c \
              bonus/ft_function_bonus.c \
              bonus/get_next_line_bonus.c \
              bonus/get_next_line_utils_bonus.c \

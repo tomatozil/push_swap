@@ -74,7 +74,7 @@ t_node	*get_n_th(t_deque *a, t_node *first, int index)
 void	update_min_max(t_deque *dq, t_node *node)
 {
 	if (dq->max->data < node->data)
-		dq->max = new_node;
+		dq->max = node;
 	if (dq->min->data > node->data)
-		dq->min = new_node;
+		dq->min = node;
 }

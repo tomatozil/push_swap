@@ -73,10 +73,6 @@ void	do_cmd(char *cmd, t_deque *a, t_deque *b)
 		ss(a, b);
 	else
 		error_exit();
-	{
-		write(2, "Error\n", 6);
-		exit(0);
-	}
 }
 
 void	is_ok(t_deque *a, t_deque *b)

@@ -1,4 +1,4 @@
-#include "checker_bonus.c"
+#include "checker_bonus.h"
 
 t_deque	*init_deque(t_deque *dq, char name)
 {

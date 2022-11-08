@@ -29,7 +29,7 @@ void	push_swap(t_deque *a, t_deque *b);
 /* check_n_parse.c */
 int		check_argv(int ac, char **av, int *nums, int size);
 
-/* deque.c, deque_utils.c */
+/* deque.c, deque_utils.c deque_life_death.c */
 t_deque	*init_deque(t_deque *dq, char name);
 t_node	*get_new_node(int new_data);
 int		is_empty(t_deque *dq);
@@ -37,6 +37,7 @@ int		push_head(t_deque *dq, int new_data);
 int		push_tail(t_deque *dq, int new_data);
 int		pop_head(t_deque *dq);
 int		pop_tail(t_deque *dq);
+void	update_min_max(t_deque *dq, t_node *node);
 t_node	*get_max(t_deque *dq);
 t_node	*get_min(t_deque *dq);
 t_node	*get_n_th(t_deque *a, t_node *first, int index);
