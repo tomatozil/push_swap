@@ -91,6 +91,7 @@ void	extract_cmd(t_deque *a, t_deque *b)
 	while (cmd)
 	{
 		do_cmd(cmd, a, b);
+        free(cmd);
 		cmd = get_next_line(0);
 	}
 }
