@@ -14,9 +14,9 @@
 
 int	ft_atoi(char *str, int *disc)
 {
-	int	cnt;
-	int	sign;
 	long	ret;
+	int		cnt;
+	int		sign;
 
 	cnt = 0;
 	sign = 1;
