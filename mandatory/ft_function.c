@@ -33,7 +33,7 @@ int	ft_atoi(char *str, int *disc)
 		cnt++;
 		str++;
 	}
-	if (*str != '\0' || cnt > 10 || \
+	if (*str != '\0' || cnt > 10 || cnt < 1 || \
 			ret * sign > 2147483647 || ret * sign < -2147483648)
 		*disc = FALSE;
 	return ((int)(ret * sign));

@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	ft_abs(int num)
+long	ft_abs(long num)
 {
 	if (num < 0)
 		return (-num);
@@ -49,17 +49,17 @@ t_node	*get_next_bigger(t_deque *another, int me)
 {
 	t_node	*tmp;
 	t_node	*next_bigger;
-	int		min_diff;
+	long	min_diff;
 
 	tmp = another->head;
 	next_bigger = tmp;
-	min_diff = ft_abs(tmp->data - me);
+	min_diff = ft_abs((long)tmp->data - (long)me);
 	while (tmp != NULL)
 	{
-		if (min_diff > ft_abs(tmp->data - me))
+		if (min_diff > ft_abs((long)tmp->data - (long)me))
 		{
 			next_bigger = tmp;
-			min_diff = ft_abs(next_bigger->data - me);
+			min_diff = ft_abs((long)next_bigger->data - (long)me);
 		}
 		tmp = tmp->next;
 	}

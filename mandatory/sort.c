@@ -74,15 +74,15 @@ void	sort_four_five(t_deque *a, t_deque *b)
 	sort_three(a);
 	cur = b->head;
 	if (cur->data > a->tail->data || cur->data < a->head->data)
-        push(b, a);
+		push(b, a);
 	while (b->size > 0)
 	{
 		next_bigger = get_next_bigger(a, b->head->data);
 		how_high = get_how_high(a, next_bigger);
 		move_to_top(a, how_high);
 		push(b, a);
-    }
-    move_to_top(a, get_how_high(a, a->min));
+	}
+	move_to_top(a, get_how_high(a, a->min));
 }
 
 void	sort_big(t_deque *a, t_deque *b)

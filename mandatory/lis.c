@@ -84,8 +84,8 @@ void	get_lis_idx_arr(t_deque *a, t_node **first, int **best, int *lis_size)
 		}
 		cur = get_next_node(a, cur);
 		i++;
+		free_arr(tmp);
 	}
-	free_arr(tmp);
 }
 
 int	*get_best_lis(t_deque *a, int *lis_size)

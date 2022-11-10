@@ -16,7 +16,7 @@ int	ft_atoi(char *str, int *disc)
 {
 	int	cnt;
 	int	sign;
-	int	ret;
+	long	ret;
 
 	cnt = 0;
 	sign = 1;
@@ -33,10 +33,10 @@ int	ft_atoi(char *str, int *disc)
 		cnt++;
 		str++;
 	}
-	if (*str != '\0' || cnt > 10 || \
+	if (*str != '\0' || cnt > 10 || cnt < 1 || \
 			ret * sign > 2147483647 || ret * sign < -2147483648)
 		*disc = FALSE;
-	return (ret * sign);
+	return ((int)(ret * sign));
 }
 
 static int	put_str(char **ret, char *cur, int size, int i)

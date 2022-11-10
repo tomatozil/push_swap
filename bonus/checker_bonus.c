@@ -80,7 +80,7 @@ void	is_ok(t_deque *a, t_deque *b)
 	if (is_deque_sorted(a) && b->size == 0)
 		write(1, "OK\n", 3);
 	else
-		write(1, "KO\n", 6);
+		write(1, "KO\n", 3);
 }
 
 void	extract_cmd(t_deque *a, t_deque *b)
@@ -91,7 +91,7 @@ void	extract_cmd(t_deque *a, t_deque *b)
 	while (cmd)
 	{
 		do_cmd(cmd, a, b);
-        free(cmd);
+		free(cmd);
 		cmd = get_next_line(0);
 	}
 }

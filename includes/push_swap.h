@@ -95,7 +95,7 @@ int		get_how_high(t_deque *dq, t_node *target);
 t_node	*get_least_cost(t_deque *me, t_deque *another, int *costs);
 
 /* move_cost_utils.c */
-int		ft_abs(int num);
+long	ft_abs(long num);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
 int		calc_together(int a, int b);
@@ -107,8 +107,5 @@ void	sort_two(t_deque *a);
 void	sort_three(t_deque *a);
 void	sort_four_five(t_deque *a, t_deque *b);
 void	sort_big(t_deque *a, t_deque *b);
-
-/* to Delete after finsh */
-void	print_deque(t_deque *a, char name);
 
 #endif
