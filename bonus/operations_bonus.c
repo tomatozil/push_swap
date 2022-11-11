@@ -17,6 +17,8 @@ void	swap(t_deque *dq)
 	int	first;
 	int	second;
 
+	if (is_empty(dq) || dq->size == 1)
+		return ;
 	first = pop_head(dq);
 	second = pop_head(dq);
 	push_head(dq, first);
@@ -25,20 +27,13 @@ void	swap(t_deque *dq)
 
 void	ss(t_deque *a, t_deque *b)
 {
-	int	first;
-	int	second;
-
-	first = pop_head(a);
-	second = pop_head(a);
-	push_head(a, first);
-	push_head(a, second);
-	first = pop_head(b);
-	second = pop_head(b);
-	push_head(b, first);
-	push_head(b, second);
+	swap(a);
+	swap(b);
 }
 
 void	push(t_deque *from, t_deque *to)
 {
+	if (is_empty(from))
+		return ;
 	push_head(to, pop_head(from));
 }

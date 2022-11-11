@@ -47,7 +47,7 @@ int	is_deque_sorted(t_deque *a)
 	return (TRUE);
 }
 
-void	do_cmd(char *cmd, t_deque *a, t_deque *b)
+int	do_cmd(char *cmd, t_deque *a, t_deque *b)
 {
 	if (ft_strncmp(cmd, "pa\n", 3) == 0)
 		push(b, a);
@@ -72,7 +72,8 @@ void	do_cmd(char *cmd, t_deque *a, t_deque *b)
 	else if (ft_strncmp(cmd, "ss\n", 3) == 0)
 		ss(a, b);
 	else
-		error_exit();
+		return (FALSE);
+	return (TRUE);
 }
 
 void	is_ok(t_deque *a, t_deque *b)
@@ -90,7 +91,12 @@ void	extract_cmd(t_deque *a, t_deque *b)
 	cmd = get_next_line(0);
 	while (cmd)
 	{
-		do_cmd(cmd, a, b);
+		if (do_cmd(cmd, a, b) == FALSE)
+		{
+			write(2, "Error\n", 6);
+			free(cmd);
+			exit(1);
+		}
 		free(cmd);
 		cmd = get_next_line(0);
 	}

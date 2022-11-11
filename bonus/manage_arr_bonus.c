@@ -18,12 +18,12 @@ void	free_arr(int *arr)
 	arr = NULL;
 }
 
-void	free_double_char(char **arr, int size)
+void	free_double_char(char **arr)
 {
 	int	i;
 
 	i = 0;
-	while (i < size)
+	while (arr[i] != NULL)
 	{
 		free(arr[i]);
 		i++;

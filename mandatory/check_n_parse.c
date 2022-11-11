@@ -32,7 +32,7 @@ int	check_duplicate(int *nums, int size)
 	return (TRUE);
 }
 
-int	check_argv(int ac, char **av, int *nums, int size)
+void	check_argv(int ac, char **av, int *nums, int size)
 {
 	char	**chars;
 	int		part_size;
@@ -46,14 +46,13 @@ int	check_argv(int ac, char **av, int *nums, int size)
 		part_size = 0;
 		chars = ft_split(av[i], ' ', &part_size);
 		if (!chars || (ac != 2 && part_size != 1))
-			return (FALSE);
+			error_exit(chars, NULL);
 		filled_size += part_size;
 		if (prep_int_arr(chars, nums, part_size, filled_size) == FALSE)
-			return (FALSE);
-		free_double_char(chars, part_size);
+			error_exit(chars, nums);
+		free_double_char(chars);
 		i++;
 	}
 	if (check_duplicate(nums, size) == FALSE)
-		return (FALSE);
-	return (TRUE);
+		error_exit(NULL, nums);
 }

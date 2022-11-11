@@ -28,12 +28,9 @@ int	main(int ac, char **av)
 	nums = malloc(sizeof(int) * size);
 	if (!nums)
 		return (0);
-	if (check_argv(ac, av, nums, size) == FALSE)
-	{
-		write(2, "Error\n", 6);
-		exit(0);
-	}
-	prep_stacks(&a, &b, nums, size);
+	check_argv(ac, av, nums, size);
+	if (prep_stacks(&a, &b, nums, size) == FALSE)
+		return (1);
 	extract_cmd(&a, &b);
 	is_ok(&a, &b);
 	free_deque(&a);

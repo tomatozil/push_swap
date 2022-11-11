@@ -14,22 +14,26 @@
 
 void	rotate(t_deque *dq)
 {
+	if (is_empty(dq))
+		return ;
 	push_tail(dq, pop_head(dq));
 }
 
 void	rr(t_deque *a, t_deque *b)
 {
-	push_tail(a, pop_head(a));
-	push_tail(b, pop_head(b));
+	rotate(a);
+	rotate(b);
 }
 
 void	reverse_rotate(t_deque *dq)
 {
+	if (is_empty(dq))
+		return ;
 	push_head(dq, pop_tail(dq));
 }
 
 void	rrr(t_deque *a, t_deque *b)
 {
-	push_head(a, pop_tail(a));
-	push_head(b, pop_tail(b));
+	reverse_rotate(a);
+	reverse_rotate(b);
 }

@@ -42,8 +42,12 @@ void	free_deque(t_deque *dq)
 	}
 }
 
-void	error_exit(void)
+void	error_exit(char **chars, int *nums)
 {
+	if (chars != NULL)
+		free_double_char(chars);
+	if (nums != NULL)
+		free(nums);
 	write(2, "Error\n", 6);
-	exit(0);
+	exit(1);
 }

@@ -39,7 +39,7 @@ typedef struct s_deque
 void	push_swap(t_deque *a, t_deque *b);
 
 /* check_n_parse.c */
-int		check_argv(int ac, char **av, int *nums, int size);
+void	check_argv(int ac, char **av, int *nums, int size);
 
 /* deque.c, deque_utils.c deque_life_death.c */
 t_deque	*init_deque(t_deque *dq, char name);
@@ -54,6 +54,7 @@ t_node	*get_max(t_deque *dq);
 t_node	*get_min(t_deque *dq);
 t_node	*get_n_th(t_deque *a, t_node *first, int index);
 void	free_deque(t_deque *dq);
+void	error_exit(char **chars, int *nums);
 
 /* operations.c */
 void	swap(t_deque *dq);
@@ -71,7 +72,7 @@ t_node	*get_next_node(t_deque *a, t_node *cur);
 
 /* manage_arr.c */
 void	free_arr(int *arr);
-void	free_double_char(char **arr, int size);
+void	free_double_char(char **arr);
 void	copy_arr(int *from, int **to, int size);
 void	set_arr(int *arr, int set_num, int size);
 int		is_exist(int *lis, int target, int lis_size);

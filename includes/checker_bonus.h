@@ -51,7 +51,7 @@ void	extract_cmd(t_deque *a, t_deque *b);
 void	is_ok(t_deque *a, t_deque *b);
 
 /* check_n_parse_bonus.c */
-int		check_argv(int ac, char **av, int *nums, int size);
+void	check_argv(int ac, char **av, int *nums, int size);
 
 /* deque_bonus.c, deque_utils_bonus.c deque_life_death_bonus.c*/
 t_deque	*init_deque(t_deque *dq, char name);
@@ -66,7 +66,7 @@ t_node	*get_max(t_deque *dq);
 t_node	*get_min(t_deque *dq);
 t_node	*get_n_th(t_deque *a, t_node *first, int index);
 void	free_deque(t_deque *dq);
-void	error_exit(void);
+void	error_exit(char **chars, int *nums);
 
 /* operations_bonus.c */
 void	swap(t_deque *dq);
@@ -84,7 +84,7 @@ t_node	*get_next_node(t_deque *a, t_node *cur);
 
 /* manage_arr_bonus.c */
 void	free_arr(int *arr);
-void	free_double_char(char **arr, int size);
+void	free_double_char(char **arr);
 void	copy_arr(int *from, int **to, int size);
 void	set_arr(int *arr, int set_num, int size);
 int		is_exist(int *lis, int target, int lis_size);

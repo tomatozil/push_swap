@@ -78,6 +78,7 @@ int	cnt_chars(char *str, char c)
 char	**malloc_chars(char *chars, char c, int *size)
 {
 	char	**ret;
+	int		i;
 
 	if (!chars)
 		return (0);
@@ -85,6 +86,12 @@ char	**malloc_chars(char *chars, char c, int *size)
 	ret = malloc(sizeof(char *) * (*size + 1));
 	if (ret == 0)
 		return (0);
+	i = 0;
+	while (i < *size)
+	{
+		ret[i] = 0;
+		i++;
+	}
 	return (ret);
 }
 
